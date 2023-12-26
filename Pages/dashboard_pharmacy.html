@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="author" content="Themesberg">
+  <meta name="generator" content="Hugo 0.101.0">
+
+  <title>Pharmacy Services | Medbox | Dashboard </title>
+
+  <link rel="canonical" href="https://flowbite-admin-dashboard.vercel.app/">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://flowbite-admin-dashboard.vercel.app//app.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flowbite-admin-dashboard.vercel.app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flowbite-admin-dashboard.vercel.app/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flowbite-admin-dashboard.vercel.app/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="https://flowbite-admin-dashboard.vercel.app/favicon.ico">
+  <link rel="manifest" href="https://flowbite-admin-dashboard.vercel.app/site.webmanifest">
+  <link rel="mask-icon" href="https://flowbite-admin-dashboard.vercel.app/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:title" content="Tailwind CSS Admin Dashboard - Flowbite">
+  <meta name="twitter:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="twitter:image" content="https://flowbite-admin-dashboard.vercel.app/">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://flowbite-admin-dashboard.vercel.app/">
+  <meta property="og:title" content="Tailwind CSS Admin Dashboard - Flowbite">
+  <meta property="og:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Plus+Jakarta+Sans&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      max-width: 400px;
+      min-height: 250px;
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      padding: 30px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #FFF;
+      margin: 20px;
+
+    }
+
+    .card:nth-child(2) {
+      background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    }
+
+    .card:last-child {
+      background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    }
+
+    .card-title {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+
+    .card-content {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+    }
+
+    .card-btn {
+      all: unset;
+      background-color: #fff;
+      color: black;
+      border: 2px solid #FFF;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 10px;
+      font-weight: 600;
+      transition: all 0.5s;
+      cursor: pointer;
+      letter-spacing: 1.2px;
+    }
+
+    .card-btn:hover {
+      color: black;
+
+    }
+
+    .card:nth-child(2) .card-btn:hover {
+      color: #4181ee;
+      background: #FFF;
+    }
+
+    .card:last-child .card-btn:hover {
+      color: #673ab7;
+      background: #FFF;
+    }
+
+    .container {
+      margin-top: 5rem;
+      max-width: 60%;
+    }
+
+    [x-cloak] {
+      display: none;
+    }
+
+    .line {
+      background: repeating-linear-gradient(to bottom,
+          #eee,
+          #eee 1px,
+          #fff 1px,
+          #fff 8%);
+    }
+
+    .tick {
+      background: repeating-linear-gradient(to right,
+          #eee,
+          #eee 1px,
+          #fff 1px,
+          #fff 5%);
+    }
+
+    .ml-3 {
+      color: white
+    }
+
+    .material-symbols-outlined {
+      color: white;
+    }
+
+    li:hover {
+      background-color: #1F2937;
+      /* Same as normal color */
+    }
+  </style>
+
+
+
+
+  <script>
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-gray-800" style="background-color: white;">
+
+  <aside id="sidebar"
+    class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full  font-normal duration-75 lg:flex transition-width"
+    aria-label="Sidebar">
+    <div style="background-color: #1F2937;"
+      class="relative flex flex-col flex-1 min-h-0 pt-0 border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" style="background-color: #1F2937;">
+        <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
+          style="background-color: #1F2937;">
+          <ul class="pb-2 space-y-2">
+
+            <li style="text-decoration:none">
+              <a href=""
+                class="flex items-center p-2 text-base text-gray-900 rounded-lg  group dark:text-gray-200 dark:hover:bg-gray-700">
+                <img src="../Assets/images/main.png" width="40px">
+                <span class="ml-3" sidebar-toggle-item><strong style="font-size: 24px;">Medbox</strong></span>
+
+              </a>
+              <span style="margin: 50px;color:white;"
+                class="bg-green-900  text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300"><strong>Pharmacy
+                  Service</strong></span>
+            </li>
+            <li class="bg-blue-700 rounded-lg">
+              <a href=""
+                class="flex items-center p-2 text-base text-gray-900 rounded-lg group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined  rounded-full" style="color:white">
+                  home
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Pages/Patient_list.html">
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-layouts" data-collapse-toggle="dropdown-layouts">
+                  <span class="material-symbols-outlined">
+                    group
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Patients</span>
+
+                </button>
+              </a>
+            </li>
+            <li>
+              <button type="button"
+                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-crud" data-collapse-toggle="dropdown-crud">
+                <span class="material-symbols-outlined">
+                  pill
+                </span>
+                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Medications</span>
+
+              </button>
+
+            </li>
+
+            <li>
+              <a href="../Pages/rapid_test.html">
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                  <span class="material-symbols-outlined">
+                    labs
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Rapid Tests</span>
+
+                </button>
+              </a>
+            </li>
+            <li>
+              <button type="button"
+                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-auth" data-collapse-toggle="dropdown-auth">
+                <span class="material-symbols-outlined">
+                  rheumatology
+                </span>
+                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Conditions</span>
+
+              </button>
+
+            </li>
+            <li>
+              <button type="button"
+                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                aria-controls="dropdown-playground" data-collapse-toggle="dropdown-playground">
+                <span class="material-symbols-outlined">
+                  emergency
+                </span>
+                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Cases</span>
+
+              </button>
+
+            </li>
+
+          </ul>
+          <div class="pt-2 space-y-2">
+            <a href="https://github.com/themesberg/flowbite-admin-dashboard" target="_blank"
+              class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+              <span class="material-symbols-outlined">
+                note_stack
+              </span>
+              <span class="ml-3" sidebar-toggle-item>Reports & Data</span>
+            </a>
+            <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
+              class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+              <span class="material-symbols-outlined">
+                clinical_notes
+              </span>
+              <span class="ml-3" sidebar-toggle-item>Pharmacist</span>
+            </a>
+
+
+            <a href="https://github.com/themesberg/flowbite-admin-dashboard/issues" target="_blank"
+              class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+              <span class="material-symbols-outlined">
+                manage_accounts
+              </span>
+              <span class="ml-3" sidebar-toggle-item>Account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: #1F2937;"
+        class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800"
+        sidebar-bottom-menu>
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../Assets/images/user (3).png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white" style="color:white">Espat
+            Pharmacy</span>
+        </a>
+
+
+        <button type="button" data-dropdown-toggle="language-dropdown"
+          class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+          <span class="material-symbols-outlined">
+            logout
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </aside>
+  <div class="flex">
+
+    <div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90" id="sidebarBackdrop"></div>
+
+    <div id="main-content" class="relative w-full h-full overflow-y-auto bg-white-500 lg:ml-64 dark:bg-gray-900">
+      <main style="background-color: white;">
+        <div
+          class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+          role="alert">
+          <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+          </svg>
+          <span class="sr-only">Info</span>
+          <div>
+            <span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
+          </div>
+        </div>
+        <br>
+        <div style="margin-left:20px;padding:10px">
+          <h1 style="font-size:30px"><strong>Overview</strong> <button type="button"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              style="float:right;background-color:#057A55"> <strong>Order Test Kits</strong></button></h1>
+        </div>
+        <div class="grid grid-cols-4">
+
+          <!-- component -->
+          <div class="max-w-sm mx-auto my-10" style="margin-left: 40px;">
+            <div class="bg-yellow-80 w-96 shadow-lg rounded-lg p-6 space-y-4"
+              style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+              <div class="flex items-center space-x-4">
+                <div class="p-2  rounded-full">
+                  <img src="../Assets/images/iconly-glass-info.svg" width="45px">
+
+                </div>
+                <div>
+                  <div class="text-white-900 text-md"><strong>Total Patients</strong></div>
+                  <div class="text-gray-900 text-2xl font-bold">
+                    71
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="max-w-sm mx-auto my-10">
+            <div class="bg-white w-96  shadow-lg rounded-lg p-6 space-y-4"
+              style="margin-left: 140px;background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+              <div class="flex items-center space-x-4">
+                <div class="p-2  rounded-full">
+                  <img src="../Assets/images/iconly-glass-info.svg" width="40px">
+
+                </div>
+                <div>
+                  <div class="text-gray-900 text-md"><strong>Recorded Conditions</strong></div>
+                  <div class="text-gray-900 text-2xl font-semibold">
+                    800
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="max-w-sm mx-auto my-10" style="margin-left: 250px;">
+            <div class="bg-white w-96 shadow-lg rounded-lg p-6 space-y-4"
+              style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+              <div class="flex items-center space-x-4">
+                <div class="p-2  rounded-full">
+                  <img src="../Assets/images/iconly-glass-info.svg" width="40px">
+                </div>
+                <div>
+                  <div class="text-gray-900 text-md"><strong>Total Test Kits</strong></div>
+                  <div class="text-gray-900 text-2xl font-semibold">
+                    58
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <!-- component -->
+          <div class="py-10" style="margin-left: 40px;">
+            <div class="w-80 bg-yellow-100 shadow-lg rounded-lg border-dashed border-2 border-indigo-600"
+              style="top:20px;">
+              <div class="w-md bg-cover" style=" display: flex;
+            justify-content: center;
+            align-items: center;">
+                <img src="../Assets/images/pills.png" style="margin-left: 10px;margin-top:20px; width:40px">
+              </div>
+              <div class="p-4  max-w-lg md:max-w-lg">
+                <h1 class="text-gray-900 font-bold text-2xl" style="text-align: center;">Despense Medication</h1>
+                <p class="mt-2 text-gray-600 text-sm" style="text-align: center;">Natural language processing (NLP)
+
+                </p>
+
+                <div class="flex item-center justify-between mt-3" style=" display: flex;
+              justify-content: center;
+              align-items: center;">
+
+                  <button class="px-3 py-2 bg-blue-700 text-white text-md font-bold capitalize rounded">
+                    <a href="../Pages/Med_despense.html">Despense</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-10" style="margin-left: 150px;">
+            <div class="w-80 bg-green-200 shadow-lg rounded-lg border-dashed border-2 border-indigo-600"
+              style="top:20px;">
+              <div class="w-md bg-cover" style=" display: flex;
+            justify-content: center;
+            align-items: center;">
+                <img src="../Assets/images/swab.png" style="margin-left: 10px;margin-top:20px; width:40px">
+              </div>
+              <div class="p-4  max-w-lg md:max-w-lg">
+                <h1 class="text-gray-900 font-bold text-2xl" style="text-align: center;">Run a Test</h1>
+                <p class="mt-2 text-gray-600 text-sm" style="text-align: center;">Natural language processing (NLP)
+
+                </p>
+
+                <div class="flex item-center justify-between mt-3" style=" display: flex;
+              justify-content: center;
+              align-items: center;">
+
+                  <button class="px-3 py-2 bg-blue-700 text-white text-md font-bold capitalize rounded">
+                    <a href="../Pages/Med_despense.html">Run New Test</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="py-10" style="margin-left: 190px;">
+            <div class="w-80 bg-red-200 shadow-lg rounded-lg border-dashed border-2 border-indigo-600"
+              style="top:20px;">
+              <div class="w-md bg-cover" style=" display: flex;
+            justify-content: center;
+            align-items: center;">
+                <img src="../Assets/images/no-sex.png" style="margin-left: 10px;margin-top:20px; width:40px">
+              </div>
+              <div class="p-4  max-w-lg md:max-w-lg">
+                <h1 class="text-gray-900 font-bold text-2xl" style="text-align: center;">Cases</h1>
+                <p class="mt-2 text-gray-600 text-sm" style="text-align: center;">Natural language processing (NLP)</p>
+
+                <div class="flex item-center justify-between mt-3" style=" display: flex;
+              justify-content: center;
+              align-items: center;">
+
+                  <button class="px-3 py-2 bg-blue-700 text-white text-md font-bold capitalize rounded">
+                    <a href="../Pages/Med_despense.html">Add New Case</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div style="margin-left: 300px;margin-top:40px;margin-right: 100px">
+    <h2 style="padding: 10px;">Recent Orders <a style="float: right;" href="#"
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View All Orders</a></h2>
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-yellow-100 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-6 py-3">
+              Product name
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Color
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Category
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Price
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <td class="px-6 py-4">
+              Hpylori test kit
+            </td>
+            <td class="px-6 py-4">
+              Casstte
+            </td>
+            <td class="px-6 py-4">
+              20
+            </td>
+            <td class="px-6 py-4">
+              GHS 812.00
+            </td>
+            <td class="px-6 py-4">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View Invoice</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white dark:bg-gray-800">
+            <td class="px-6 py-4">
+              Malaria Test Kits
+            </td>
+            <td class="px-6 py-4">
+              Casstte
+            </td>
+            <td class="px-6 py-4">
+              52
+            </td>
+            <td class="px-6 py-4">
+              GHS 245.00
+            </td>
+            <td class="px-6 py-4">
+              <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View Invoice</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Foooter -->
+
+
+  </main>
+  <p class="text-md text-center text-gray-500" style="position: absolute;bottom:0;width:100%">
+    &copy; 2019-2023 <a href="www.datasusgh.com" class="hover:underline">
+      <strong>Datasus Technologies</strong></a>. All rights reserved.
+  </p>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+  <script>
+    function app() {
+      return {
+        chartData: [112, 10, 225, 134, 101, 80, 50, 100, 200],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        tooltipContent: '',
+        tooltipOpen: false,
+        tooltipX: 0,
+        tooltipY: 0,
+        showTooltip(e) {
+          console.log(e);
+          this.tooltipContent = e.target.textContent
+          this.tooltipX = e.target.offsetLeft - e.target.clientWidth;
+          this.tooltipY = e.target.clientHeight + e.target.clientWidth;
+        },
+        hideTooltip(e) {
+          this.tooltipContent = '';
+          this.tooltipOpen = false;
+          this.tooltipX = 0;
+          this.tooltipY = 0;
+        }
+      }
+    }
+  </script>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script type="module" src="./assets/flowbite/flowbite.js"></script>
+  <script type="module" src="./assets/sidebar.js"></script>
+  <!-- <script type="module" src="./assets/charts.js"></script> -->
+  <script type="module" src="./assets/dark-mode.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/datepicker.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="author" content="Datasus Technologies">
+  <meta name="generator" content="">
+
+  <title>Patient Profile | Medbox</title>
+
+  <link rel="canonical" href="https://flowbite-admin-dashboard.vercel.app/playground/sidebar/">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://flowbite-admin-dashboard.vercel.app//app.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flowbite-admin-dashboard.vercel.app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://flowbite-admin-dashboard.vercel.app/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://flowbite-admin-dashboard.vercel.app/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="https://flowbite-admin-dashboard.vercel.app/favicon.ico">
+  <link rel="manifest" href="https://flowbite-admin-dashboard.vercel.app/site.webmanifest">
+  <link rel="mask-icon" href="https://flowbite-admin-dashboard.vercel.app/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:title" content="Tailwind CSS Sidebar Layout Playground - Flowbite">
+  <meta name="twitter:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="twitter:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://flowbite-admin-dashboard.vercel.app/playground/sidebar/">
+  <meta property="og:title" content="Tailwind CSS Sidebar Layout Playground - Flowbite">
+  <meta property="og:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Plus+Jakarta+Sans&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .ml-3 {
+      color: white
+    }
+
+    .material-symbols-outlined {
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+
+
+
+
+  <script>
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+<body style="background-color: white;">
+
+  <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+
+    <aside id="sidebar"
+      class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full  font-normal duration-75 lg:flex transition-width"
+      aria-label="Sidebar">
+      <div style="background-color: #1F2937;"
+        class="relative flex flex-col flex-1 min-h-0 pt-0 border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" style="background-color: #1F2937;">
+          <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
+            style="background-color: #1F2937;">
+            <ul class="pb-2 space-y-2">
+
+              <li style="text-decoration:none">
+                <a href=""
+                  class="flex items-center p-2 text-base text-gray-900 rounded-lg  group dark:text-gray-200 dark:hover:bg-gray-700">
+                  <img src="../Assets/images/main.png" width="40px">
+                  <span class="ml-3" sidebar-toggle-item><strong style="font-size: 24px;">Medbox</strong></span>
+
+                </a>
+                <span style="margin: 50px;"
+                  class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300"><strong>Pharmacy
+                    Service</strong></span>
+              </li>
+              <li>
+                <a href=""
+                  class="flex items-center p-2 text-base text-gray-900 rounded-lg group dark:text-gray-200 dark:hover:bg-gray-700">
+                  <span class="material-symbols-outlined  rounded-full" style="color:white">
+                    home
+                  </span>
+                  <span class="ml-3" sidebar-toggle-item>Dashboard</span>
+                </a>
+              </li>
+              <li class="bg-blue-700 rounded-lg">
+                <a href="../Pages/Patient_list.html">
+                  <button type="button"
+                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                    aria-controls="dropdown-layouts" data-collapse-toggle="dropdown-layouts">
+                    <span class="material-symbols-outlined">
+                      group
+                    </span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Patients</span>
+
+                  </button>
+                </a>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-crud" data-collapse-toggle="dropdown-crud">
+                  <span class="material-symbols-outlined">
+                    pill
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Medications</span>
+
+                </button>
+
+              </li>
+
+              <li>
+                <a href="../Pages/rapid_test.html">
+                  <button type="button"
+                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                    aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                    <span class="material-symbols-outlined">
+                      labs
+                    </span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Rapid Tests</span>
+
+                  </button>
+                </a>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-auth" data-collapse-toggle="dropdown-auth">
+                  <span class="material-symbols-outlined">
+                    rheumatology
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Conditions</span>
+
+                </button>
+
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-playground" data-collapse-toggle="dropdown-playground">
+                  <span class="material-symbols-outlined">
+                    emergency
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Cases</span>
+
+                </button>
+
+              </li>
+
+            </ul>
+            <div class="pt-2 space-y-2">
+              <a href="https://github.com/themesberg/flowbite-admin-dashboard" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  note_stack
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Reports & Data</span>
+              </a>
+              <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  clinical_notes
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Pharmacist</span>
+              </a>
+
+
+              <a href="https://github.com/themesberg/flowbite-admin-dashboard/issues" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  manage_accounts
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Account</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: #1F2937;"
+          class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800"
+          sidebar-bottom-menu>
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="../Assets/images/user (3).png" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white" style="color:white">Espat
+              Pharmacy</span>
+          </a>
+
+
+          <button type="button" data-dropdown-toggle="language-dropdown"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+            <span class="material-symbols-outlined">
+              logout
+            </span>
+          </button>
+
+        </div>
+      </div>
+    </aside>
+
+    <div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90" id="sidebarBackdrop"></div>
+
+    <div id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900">
+
+
+      <main>
+        <nav class="flex" aria-label="Breadcrumb" style="margin-left: 20px;">
+          <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+              <a href="#" style="font-size: 20px;padding:10px"
+                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+
+                Patient Pharmacy Records
+
+              </a>
+
+            </li>
+
+
+          </ol>
+        </nav>
+        <hr>
+
+
+
+
+
+        <div class="border-b border-gray-200 dark:border-gray-700">
+          <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+
+            <li class="me-2 tab-btn" onclick="changeTab(1)">
+              <a href="#"
+                class="inline-flex items-center justify-center p-4 text-blue-600 border-b-2 border-blue-500 rounded-t-lg dark:text-blue-500 dark:border-blue-500 group"
+                aria-current="page">
+                <span style="color: #005bea;" class="material-symbols-outlined">
+                  account_circle
+                </span>
+                <strong> Personal Information</strong>
+              </a>
+            </li>
+
+            <li class="me-2 tab-btn" onclick="changeTab(2)">
+              <a href="#"
+                class="inline-flex items-center justify-center p-4 text-gray-600 border-b-2 border-blue-500 rounded-t-lg dark:text-blue-500 dark:border-blue-500 group">
+                <span style="color: #005bea;" class="material-symbols-outlined">
+                  file_present
+                </span> Medical Records
+              </a>
+            </li>
+
+            <li class="me-2 tab-btn" onclick="changeTab(3)">
+              <a href="#"
+                class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                <span style="color:#005bea" class="material-symbols-outlined">
+                  pill_off
+                </span> Medication Records
+              </a>
+            </li>
+
+            <li class="me-2 tab-btn" onclick="changeTab(4)">
+              <a href="#"
+                class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                <span style="color: #005bea;" class="material-symbols-outlined">
+                  lab_profile
+                </span> Rapid Test Records
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
+
+
+          <!-- Right Content -->
+          <div class="col-span-6 ">
+            <div
+              class="p-4 mb-4 space-y-6 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800 tab-content active mt-4"
+              id="tab1">
+              <div style="background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);"
+                class="px-4 py-2 bg-blue-500 text-dark-500 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3 style="color:white">Personal Information <span data-modal-target="crud-modal"
+                    data-modal-toggle="crud-modal" style="float:right"
+                    class="inline-flex items-center justify-center w-6 h-6 me-2 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full dark:bg-gray-700 dark:text-blue-400">
+                    <span style="font-size: 15px;color:#1F2937" class="material-symbols-outlined">
+                      edit_square
+                    </span>
+                    <span class="sr-only">Icon description</span>
+                  </span></h3>
+              </div>
+              <div
+                class="h-52 px-4 py-2 text-dark-400 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3><span style="font-size:15px;">Patient Name <span style="float: right;">Kwame Asare Afari</span></h3>
+                <br>
+                <span style="font-size:15px;">Age <span
+                    class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">50</span> </span>
+                <br>
+                <br>
+                <span style="font-size:15px;">Gender <span
+                    class="bg-dark-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">Male</span> </span>
+                <br>
+                <br>
+                <span style="font-size:15px;"> Home Address <span
+                    class="bg-dark-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">Mayera</span> </span>
+                <br>
+                <br>
+                <span style="font-size:15px;">Mobile Line<span
+                    class="bg-gray-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">05573783738</span> </span>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-span-6">
+            <div id="tab2"
+              class="p-4 mb-4 space-y-6 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800 tab-content">
+              <div style="background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);"
+                class="px-4 py-2 bg-blue-500 text-dark-500 border border-gray-200 border-dashed rounded dark:border-gray-600 ">
+                <h3 style="color:white">Previous history</h3>
+              </div>
+              <div
+                class="h-52 px-4 py-2 text-dark-400 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3><span style="font-size:15px;">Known conditions <span style="float: right;">diabetes ,
+                      Hypentension</span></h3>
+                <br>
+                <span style="font-size:15px;">Had surgery before? <span
+                    class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">No</span> </span>
+                <br>
+                <br>
+                <span style="font-size:15px;">Known allegies <span
+                    class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300"
+                    id="surgery" style="float:right;">Peanut butter / Eggs / Rice</span> </span>
+
+              </div>
+
+            </div>
+
+
+            <div id="tab3"
+              class="p-4 mb-4 space-y-6 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800 tab-content">
+              <div style="background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);"
+                class="px-4 py-2 bg-blue-500 text-dark-500 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3 style="color:white">Family history</h3>
+              </div>
+              <div
+                class="h-52 px-4 py-2 text-dark-400 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3><span style="font-size:15px;">Marital status? <span style="float: right;">Married</span></h3>
+                <br>
+                <span style="font-size:15px;">Known Family Conditions<span
+                    class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+                    id="surgery" style="float:right;">heart Disease</span> </span>
+                <br>
+              </div>
+
+            </div>
+            <div
+              class="p-4 mb-4 space-y-6 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800 tab-content mt-4"
+              id="tab4">
+              <div
+                class="px-4 bg-blue-500 py-2 text-gray-400 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3 style="color:white;">Social history</h3>
+              </div>
+              <div
+                class="h-32 px-4 py-2 text-dark-500 border border-gray-200 border-dashed rounded dark:border-gray-600">
+                <h3><span style="font-size:15px;">Occupation <span style="float: right;">Retired</span></h3>
+                <br>
+                <span style="font-size:15px;">Does Patient Drink ?<span
+                    class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+                    id="surgery" style="float:right;">Yes</span> </span>
+                <br>
+              </div>
+              <div class="px-4 py-2 text-gray-400 border border-gray-200 border-dashed rounded dark:border-gray-600">
+
+                <div id="accordion-nested-parent" data-accordion="collapse">
+                  <h2 id="accordion-collapse-heading-1">
+                    <button type="button"
+                      class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-blue-300 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                      data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                      aria-controls="accordion-collapse-body-1">
+                      <span> Medications </span>
+                      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5 5 1 1 5" />
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                      <p class="mb-2 text-gray-500 dark:text-gray-400">List of Medications Patient is On </p>
+
+
+                      <!-- Nested accordion -->
+                      <div id="accordion-nested-collapse" data-accordion="collapse">
+                        <h2 id="accordion-nested-collapse-heading-1">
+                          <button type="button"
+                            class="flex items-center justify-between w-full p-5 rounded-t-xl font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                            data-accordion-target="#accordion-nested-collapse-body-1" aria-expanded="false"
+                            aria-controls="accordion-nested-collapse-body-1">
+                            <span><span class="material-symbols-outlined">
+                                pill
+                              </span> Best Health Natural herbal cough drops</span>
+
+                          </button>
+                        </h2>
+                        <div id="accordion-nested-collapse-body-1" class="hidden"
+                          aria-labelledby="accordion-nested-collapse-heading-1">
+                          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                            <p class="text-gray-500 dark:text-gray-400">The main difference is that the core components
+                              from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid
+                              product.</p>
+                          </div>
+                        </div>
+                        <h2 id="accordion-nested-collapse-heading-2">
+                          <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                            data-accordion-target="#accordion-nested-collapse-body-2" aria-expanded="false"
+                            aria-controls="accordion-nested-collapse-body-2">
+                            <span>BEO INJECTION </span>
+
+                          </button>
+                        </h2>
+                        <div id="accordion-nested-collapse-body-2" class="hidden"
+                          aria-labelledby="accordion-nested-collapse-heading-2">
+                          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                            <p class="text-gray-500 dark:text-gray-400">Another difference is that Flowbite relies on
+                              smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                          </div>
+                        </div>
+                        <h2 id="accordion-nested-collapse-heading-3">
+                          <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+                            data-accordion-target="#accordion-nested-collapse-body-3" aria-expanded="false"
+                            aria-controls="accordion-nested-collapse-body-3">
+                            <span>APIDRA 100UL/ML SOLOSTAR 3ML </span> <span style="float:right;">Dose: 3x Daily / Afer
+                              Meal</span>
+
+                          </button>
+                        </h2>
+                        <div id="accordion-nested-collapse-body-3" class="hidden"
+                          aria-labelledby="accordion-nested-collapse-heading-3">
+                          <div class="p-5 border border-gray-200 dark:border-gray-700">
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">We actually recommend using both Flowbite,
+                              Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using
+                              the best of two worlds.</p>
+                            <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                              <li><a href="https://flowbite.com/pro/"
+                                  class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                              <li><a href="https://tailwindui.com/" rel="nofollow"
+                                  class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End: Nested accordion -->
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+
+
+
+    </div>
+
+
+    <p class="my-10 text-sm text-center text-gray-500" style="position:absolute;bottom:0%;width:100%;">
+      &copy; 2019-2023 <a href="" class="hover:underline" target="_blank">Datasus
+        Technologies</a>. All
+      rights reserved.
+    </p>
+  </div>
+
+
+  <div id="crud-modal" tabindex="-1" aria-hidden="true"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            Edit Patient Personal Information
+          </h3>
+          <button type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-toggle="crud-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <form class="p-4 md:p-5">
+          <div class="grid gap-4 mb-4 grid-cols-2">
+            <div class="col-span-2">
+              <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Patient
+                Name</label>
+              <input type="text" name="name" id="name"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Name" required="">
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of
+                Birth</label>
+              <input type="date" id="selectedDate" oninput="calculateDOB()"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="0" required="">
+            </div>
+            <p id="result"></p>
+
+
+            <div class="col-span-2 sm:col-span-1">
+              <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile
+                Line</label>
+              <input type="number" name="price" id="price"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="0" required="">
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
+              <select id="category"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                <option selected="">Select category</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+
+              </select>
+            </div>
+
+          </div>
+          <button type="submit"
+            class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Add new product
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function changeTab(tabNumber) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active');
+      });
+
+      // Show the selected tab content
+      const selectedTab = document.getElementById(`tab${tabNumber}`);
+      selectedTab.classList.add('active');
+    }
+
+
+    function calculateDOB() {
+      // Get the selected date value from the input field
+      var selectedDate = document.getElementById("selectedDate").value;
+
+      // Check if a valid date is selected
+      if (selectedDate) {
+        // Create a Date object from the selected date
+        var selectedDateObj = new Date(selectedDate);
+
+        // Extract day, month, and year from the Date object
+        var day = selectedDateObj.getDate();
+        var month = selectedDateObj.getMonth() + 1; // Months are 0-indexed, so we add 1
+        var year = selectedDateObj.getFullYear();
+
+        // Display the result
+        var resultMessage = "Date of Birth: " + day + "/" + month + "/" + year;
+        document.getElementById("result").textContent = resultMessage;
+      } else {
+        // If no date is selected, display a message
+        document.getElementById("result").textContent = "Please select a valid date.";
+      }
+    }
+  </script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://flowbite-admin-dashboard.vercel.app//app.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/datepicker.min.js"></script>
+</body>
+
+</html>

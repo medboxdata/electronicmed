@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="author" content="Themesberg">
+  <meta name="generator" content="Hugo 0.101.0">
+
+  <title>Medbox | Despense-Medications</title>
+
+  <link rel="canonical" href="https://flowbite-admin-dashboard.vercel.app/playground/sidebar/">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://flowbite-admin-dashboard.vercel.app//app.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://flowbite-admin-dashboard.vercel.app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../Assets/images/capsules.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Assets/images/capsules.png">
+  <link rel="icon" type="image/png" href="../Assets/images/capsules.png">
+  <link rel="manifest" href="https://flowbite-admin-dashboard.vercel.app/site.webmanifest">
+  <link rel="mask-icon" href="https://flowbite-admin-dashboard.vercel.app/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:title" content="Tailwind CSS Sidebar Layout Playground - Flowbite">
+  <meta name="twitter:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta name="twitter:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://flowbite-admin-dashboard.vercel.app/playground/sidebar/">
+  <meta property="og:title" content="Tailwind CSS Sidebar Layout Playground - Flowbite">
+  <meta property="og:description"
+    content="Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Plus+Jakarta+Sans&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .p-4 {
+      color: white;
+    }
+
+    .ml-3 {
+      color: white
+    }
+
+    .material-symbols-outlined {
+      color: white;
+    }
+  </style>
+
+
+
+
+  <script>
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+<body class="bg-white-500" style="background-color: white;">
+  <div class="flex pt-16 overflow-hidden bg-white-200">
+
+    <aside id="sidebar"
+      class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full  font-normal duration-75 lg:flex transition-width"
+      aria-label="Sidebar">
+      <div style="background-color: #1F2937;"
+        class="relative flex flex-col flex-1 min-h-0 pt-0 border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" style="background-color: #1F2937;">
+          <div class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
+            style="background-color: #1F2937;">
+            <ul class="pb-2 space-y-2">
+
+              <li style="text-decoration:none">
+                <a href=""
+                  class="flex items-center p-2 text-base text-gray-900 rounded-lg  group dark:text-gray-200 dark:hover:bg-gray-700">
+                  <img src="../Assets/images/main.png" width="40px">
+                  <span class="ml-3" sidebar-toggle-item><strong style="font-size: 24px;">Medbox</strong></span>
+
+                </a>
+                <span style="margin: 50px;color:white;"
+                  class="bg-green-900  text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300"><strong>Pharmacy
+                    Service</strong></span>
+              </li>
+              <li>
+                <a href="../Pages/dashboard_pharmacy.html"
+                  class="flex items-center p-2 text-base text-gray-900 rounded-lg group dark:text-gray-200 dark:hover:bg-gray-700">
+                  <span class="material-symbols-outlined  rounded-full" style="color:white">
+                    home
+                  </span>
+                  <span class="ml-3" sidebar-toggle-item>Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="../Pages/Patient_list.html">
+                  <button type="button"
+                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                    aria-controls="dropdown-layouts" data-collapse-toggle="dropdown-layouts">
+                    <span class="material-symbols-outlined">
+                      group
+                    </span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Patients</span>
+
+                  </button>
+                </a>
+              </li>
+              <li class="bg-blue-700 rounded-lg">
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-crud" data-collapse-toggle="dropdown-crud">
+                  <span class="material-symbols-outlined">
+                    pill
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Medications</span>
+
+                </button>
+
+              </li>
+
+              <li>
+                <a href="../Pages/rapid_test.html">
+                  <button type="button"
+                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                    aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                    <span class="material-symbols-outlined">
+                      labs
+                    </span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Rapid Tests</span>
+
+                  </button>
+                </a>
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-auth" data-collapse-toggle="dropdown-auth">
+                  <span class="material-symbols-outlined">
+                    rheumatology
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Conditions</span>
+
+                </button>
+
+              </li>
+              <li>
+                <button type="button"
+                  class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-blue-700 dark:text-gray-200 dark:hover:bg-gray-700"
+                  aria-controls="dropdown-playground" data-collapse-toggle="dropdown-playground">
+                  <span class="material-symbols-outlined">
+                    emergency
+                  </span>
+                  <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Cases</span>
+
+                </button>
+
+              </li>
+
+            </ul>
+            <div class="pt-2 space-y-2">
+              <a href="https://github.com/themesberg/flowbite-admin-dashboard" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  note_stack
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Reports & Data</span>
+              </a>
+              <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  clinical_notes
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Pharmacist</span>
+              </a>
+
+
+              <a href="https://github.com/themesberg/flowbite-admin-dashboard/issues" target="_blank"
+                class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-blue-700 group dark:text-gray-200 dark:hover:bg-gray-700">
+                <span class="material-symbols-outlined">
+                  manage_accounts
+                </span>
+                <span class="ml-3" sidebar-toggle-item>Account</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: #1F2937;"
+          class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800"
+          sidebar-bottom-menu>
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="../Assets/images/user (3).png" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-1xl font-semibold whitespace-nowrap dark:text-white" style="color:white">Espat
+              Pharmacy</span>
+          </a>
+
+
+          <button type="button" data-dropdown-toggle="language-dropdown"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+            <span class="material-symbols-outlined">
+              logout
+            </span>
+          </button>
+
+        </div>
+      </div>
+    </aside>
+
+    <div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90" id="sidebarBackdrop"></div>
+
+    <div id="main-content" class="relative w-full h-full overflow-y-auto bg-white-100 lg:ml-64 dark:bg-gray-900"
+      style="margin-top:-30px">
+      <main style="background-color: white;">
+
+        <div
+          class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5 dark:bg-gray-800 dark:border-gray-700">
+          <div class="w-full mb-1">
+            <div class="mb-4">
+              <h1 class="text-md font-semibold text-gray-900 sm:text-1xl dark:text-white">Medication Despening
+                Portal(Rx)
+              </h1>
+            </div>
+            <div>
+
+              <div class="items-center hidden mb-3 md:flex sm:divide-x sm:divide-gray-100 sm:mb-0 dark:divide-gray-700"
+                style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);padding:5px">
+
+                <button id="dropdownUsersButton" data-dropdown-toggle="dropdownUsers" data-dropdown-placement="bottom"
+                  class="py-2.5 px-5 w-64 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  type="button">Select Patient Name
+
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownUsers" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+
+                  <form>
+                    <label for="default-search"
+                      class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    <div class="relative">
+
+                      <input type="search" id="default-search"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search" required>
+
+                    </div>
+                  </form>
+
+                  <ul class="h-48 py-2 overflow-y-auto text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownUsersButton">
+                    <li>
+                      <a href="#"
+                        class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <img class="w-6 h-6 me-2 rounded-full" src="../Assets/images/user (4).png" alt="Jese image">
+                        Jese Oppong
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <img class="w-6 h-6 me-2 rounded-full" src="../Assets/images/user (4).png" alt="Jese image">
+                        Kwame Osei Jones
+                      </a>
+                    </li>
+
+                  </ul>
+                  <a href="#"
+                    class="flex items-center p-3 text-sm font-medium text-blue-600 border-t border-gray-200 rounded-b-lg bg-gray-50 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-blue-500 hover:underline">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                      viewBox="0 0 20 18">
+                      <path
+                        d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z" />
+                    </svg>
+                    Add new Patient
+                  </a>
+                </div>
+
+                <div class="mb-6" style="margin-left: 30px;">
+                  <label for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"><strong>Selected Patient
+                      Name</strong></label>
+
+                  <input type="text" id="selected_patient"
+                    class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-5.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                </div>
+
+                <button style="margin-left: 30px;" id="dropdownUsersButton2" data-dropdown-toggle="dropdownUsers2"
+                  data-dropdown-placement="bottom"
+                  class="py-2.5 px-5 w-64 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border-dashed border-2 border-indigo-900 ...  hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  type="button">Select Medication
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownUsers2" class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700">
+
+                  <form>
+                    <label for="default-search"
+                      class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    <div class="relative" style="margin-left:10px;margin-right:10px;margin-top:10px;">
+
+                      <input type="search" id="med-search" onkeyup="myFunction()" style="height: 40px;"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search" required>
+
+                    </div>
+                  </form>
+
+                  <ul id="myUL" class="h-78 py-6 overflow-y-auto text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownUsersButton2">
+                    <li id="li">
+                      <a href="#" style="font-size: 12px;"
+                        class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <span style="color:#057A55" class="material-symbols-outlined">
+                          pill
+                        </span>
+                        Benzyl benzoate susp.(Dannex)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" style="font-size: 12px; text-transform:capitalize"
+                        class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        <span style="color:#057A55" class="material-symbols-outlined">
+                          pill
+                        </span>
+                        BLEOTOP INJECTION (BLEOMYCIN)
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="mb-6" style="margin-left: 30px;">
+                  <label for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Selected Medication</label>
+                  <input type="text" id=""
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    b readonly>
+                </div>
+                <div class="mb-6" style="margin-left: 30px;">
+                  <label for="default-input"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Medication Type</label>
+                  <select id="" class="bg-gray-50 w-50 border border-gray-300 text-gray-900 text-sm rounded-lg ">
+                    <option selected>Select</option>
+                    <option value="US">Tablets/Casuples</option>
+                    <option value="CA">Syurps</option>
+                    <option value="FR">Injections</option>
+                    <option value="Ointment">Ointment</option>
+                  </select>
+                </div>
+
+                <div class="flex pl-0 mt-3 space-x-1 sm:pl-2 sm:mt-0">
+
+                  <button type="button"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+
+                    Add
+                  </button>
+
+                </div>
+              </div>
+
+            </div>
+            <nav class="flex bg-blue-100 h-10" aria-label="Breadcrumb">
+              <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                  <a href="#"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+
+                    <strong>Patient Name: Kwasi Agarko</strong>
+                  </a>
+                </li>
+                <li>
+                  <div class="flex items-center">
+
+                    <a href="#"
+                      class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Age:50</a>
+                  </div>
+                </li>
+                <li aria-current="page">
+                  <div class="flex items-center">
+
+                    <span
+                      class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Condition:Diabetes</span>
+                  </div>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="flex flex-col" style="margin-left: 20px;margin-right:20px;text-decoration:none">
+          <div class="overflow-x-auto">
+            <div class="inline-block min-w-full align-middle">
+              <div class="overflow-hidden shadow">
+                <table class="w-full  divide-y divide-gray-200 table-fixed dark:divide-gray-600">
+                  <thead class="bg-gray-100 dark:bg-gray-700"
+                    style="background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);">
+                    <tr>
+
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        <strong>Medication/Drug</strong>
+                      </th>
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Generic Name
+                      </th>
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Category
+                      </th>
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Expiry Date
+                      </th>
+
+
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Manufacture
+                      </th>
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Medication Type
+                      </th>
+                      <th scope="col" style="font-size: 13px;"
+                        class="p-4 text-md font-medium text-left text-gray-500 capitalize dark:text-gray-400">
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+
+
+                    <tr class="bg-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+
+                      <td class="px-6 py-4">
+
+                        <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                          <div class="text-base font-semibold text-gray-900 dark:text-white">
+                            APIDRA 100UL/ML SOLOSTAR 3ML</div>
+
+                        </div>
+                      </td>
+
+                      <td style="color:#1F2937"
+                        class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                        EPL039321
+                      </td>
+                      <td style="color:#1F2937"
+                        class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-900 truncate xl:max-w-xs dark:text-gray-400">
+                        EPL039321
+                      </td>
+                      <td style="color:#1F2937"
+                        class="max-w-sm p-4 overflow-hidden text-base font-normal text-gary-900 truncate xl:max-w-xs dark:text-gray-400">
+                        12/09/2023
+                      </td>
+
+                      <td style="color:#1F2937"
+                        class="max-w-sm p-4 overflow-hidden text-base font-normal text-gary-900 truncate xl:max-w-xs dark:text-gray-400">
+                        Enerst Chemist
+                      </td>
+                      <td style="color:#1F2937"
+                        class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                        Herbal
+                      </td>
+                      <td class="p-4 space-x-2 whitespace-nowrap">
+                        <a>
+                          <button data-drawer-target="drawer-form" data-drawer-show="drawer-form"
+                            aria-controls="drawer-form" type="button" style="background-color: #057A55;"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+
+                            Add Plan
+                          </button>
+                        </a>
+
+                      </td>
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+
+
+    </div>
+  </div>
+  </div>
+
+
+  <!-- drawer component -->
+  <div id="drawer-form"
+    class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800"
+    tabindex="-1" aria-labelledby="drawer-form-label">
+    <h5 id="drawer-label" style="font-size: 19px;"
+      class="inline-flex items-center mb-6 text-base font-semibold text-gray-900 capitalize dark:text-gray-400">
+      <strong> Medication Plan</strong> <br>
+    </h5>
+
+    <button type="button" data-drawer-hide="drawer-form" aria-controls="drawer-form"
+      class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+      </svg>
+      <span class="sr-only">Close menu</span>
+    </button>
+
+    <form class="mb-6">
+      <span
+        class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"><strong>BLEOTOP
+          INJECTION (BLEOMYCIN)</strong></span>
+      <br>
+      <br>
+      <div class="mb-6">
+
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an
+          Interval</label>
+        <select id="countries"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Select Interval</option>
+          <option value="US">1 Hours</option>
+          <option value="CA">2 Hours</option>
+          <option value="FR">3 Hours</option>
+          <option value="DE">4 Hours</option>
+          <option value="DE">5 Hours</option>
+          <option value="DE">6 Hours</option>
+          <option value="DE">7 Hours</option>
+          <option value="DE">8 Hours</option>
+          <option value="DE">9 Hours</option>
+          <option value="DE">10 Hours</option>
+        </select>
+
+      </div>
+      <div class="mb-6">
+        <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number of Days To
+          be Taken:</label>
+        <input type="number" id="number-input" aria-describedby="helper-text-explanation"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="10" required>
+      </div>
+      <div class="mb-6">
+        <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Medication Satrt
+          Date:</label>
+        <input type="date" id="number-input" aria-describedby="helper-text-explanation"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="10" required>
+      </div>
+
+      <div class="mb-6">
+        <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Medication Start
+          Time</label>
+        <input type="time" id="number-input" aria-describedby="helper-text-explanation"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="10" required>
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Medication InTake
+          Remarks</label>
+        <textarea id="message" rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Write your remarks here..."></textarea>
+      </div>
+
+      <button type="submit"
+        class="text-white justify-center flex items-center bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Confirm
+        & Save</button>
+    </form>
+  </div>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('med-search');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+  </script>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://flowbite-admin-dashboard.vercel.app//app.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/datepicker.min.js"></script>
+</body>
+
+</html>
